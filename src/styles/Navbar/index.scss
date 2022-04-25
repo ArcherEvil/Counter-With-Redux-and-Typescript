@@ -1,0 +1,303 @@
+$bg : #181818;
+$bradius : 10px;
+$bg-btn : rgb(240, 240, 240);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+@mixin center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.Navbar {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include center();
+    width: 100%;
+    height: 10%;
+    background-color: $bg;
+    div.navcontainer {
+        display: flex;
+        margin-right: 20px;
+        select {
+                padding: 0px 20px 0px 20px;
+                border: 1px solid rgb(71, 71, 71);
+                outline: none;
+                color: white;
+                border-radius: 20px;
+                font-weight: 800;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.2rem;
+                background-color: #2e2e2e;
+                cursor: pointer;
+                option {
+                    cursor: pointer;
+
+                }
+                &:hover {
+                    background-color: #3f3f3f;
+                    
+                }
+                
+            }
+    }
+    a {
+        margin-left: 20px;
+        outline: none;
+        border: none;
+        margin-right: auto;
+        z-index: 15;
+        background: none;
+        text-decoration: none;
+        color: invert($bg);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    div.Searchbar {
+        border-radius: $bradius;
+        height: 50px;
+        margin-right: 50px;
+        &:hover{
+            input{
+                padding: 1.1em;
+                width: 200px;
+            }
+            button {
+                border-radius: 0px $bradius $bradius 0px;
+                background-color: $bg-btn;
+            }
+        }
+        background-color: white;
+        @include center();
+        input {
+            padding: 0;
+            transition: all ease-out 400ms;
+            width: 0px;
+            font-size: 16px;
+            border-radius: $bradius  0px 0px $bradius;
+            &:focus {
+                padding: 1.1em;
+                width: 200px;
+                box-shadow: 0px 0px 5px rgb(0, 0, 0);
+                z-index: 1;
+            }
+            height:100%;
+            outline: none;
+            border: none;
+        }
+        button {
+            height: 100%;
+            transition: border-radius  ease-out 400ms;
+            
+            background-color: white;
+            border: none;
+            outline: none;
+            padding: 0 .5em 0 .5em;
+            border-radius: $bradius * 3;
+            cursor: pointer;
+            &:hover{
+                background-color: darken($bg-btn, 10%);
+            }
+            &:active {
+                background-color: invert($bg-btn);
+                img {
+                    filter: invert(100%);
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav.Navbar {
+        justify-content: space-around;
+        a {
+            font-size : 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav.Navbar {
+        select {
+            transform: scale(0.8);
+            margin: 0;
+            padding: 0;
+        }
+        div.Searchbar {
+            transform: scale(0.9);
+            input {
+                padding: 1.1em;
+                width: 150px;
+            }
+            button {
+                border-radius: 0px $bradius $bradius 0px;
+                background-color: $bg-btn;
+            }
+        }
+    }
+}
+
+@media screen and (orientation : landscape) and (max-width: 1000px) and (max-height: 400px)  {
+    nav.Navbar {
+        height: 20%;
+        a {
+            font-size : 1.2rem;
+        }
+        div.Searchbar {
+            transform: scale(0.7);
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    nav.Navbar {
+        div.navcontainer {
+            display: flex;
+            margin-right: 5px;
+            select {
+                    padding: 0px 10px 0px 10px;
+                    border: 1px solid rgb(71, 71, 71);
+                    outline: none;
+                    color: white;
+                    border-radius: 20px;
+                    font-weight: 800;
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 0.8rem;
+                    background-color: #2e2e2e;
+                    cursor: pointer;
+                    option {
+                        cursor: pointer;
+    
+                    }
+                    &:hover {
+                        background-color: #3f3f3f;
+                        
+                    }
+                    
+                }
+        }
+        a {
+            margin: 0;
+            font-size : 1rem;
+            padding-right: 2px;
+            z-index: 2;
+        }
+        div.Searchbar {
+            margin: 0;
+            transform: scale(0.8);
+            input {
+                padding: 1.1em;
+                width: 100px;
+            }
+            button {
+                border-radius: 0px $bradius $bradius 0px;
+                background-color: $bg-btn;
+            }
+        }
+    }
+}
+
+
+.menubtn {
+    margin-left: 10px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 80px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      /* border: 3px solid #fff; */
+    }
+    .menubtn__burger {
+      width: 50px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+    }
+    .menubtn__burger::before,
+    .menubtn__burger::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+    }
+    .menubtn__burger::before {
+      transform: translateY(-16px);
+    }
+    .menubtn__burger::after {
+      transform: translateY(16px);
+    }
+  
+  @media screen and (max-width: 600px) {
+    .menubtn__burger {
+      width: 25px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+    }
+    .menubtn__burger::before,
+    .menubtn__burger::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 6px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+    }
+    }
+  
+    @media screen and (max-width: 800px) {
+      .menubtn {
+        margin-left: 2px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 80px;
+          cursor: pointer;
+          transition: all .5s ease-in-out;
+          /* border: 3px solid #fff; */
+        }
+        .menubtn__burger {
+          width: 25px;
+          height: 4px;
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+        }
+        .menubtn__burger::before,
+        .menubtn__burger::after {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 4px;
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+        }
+      .menubtn__burger::before {
+        transform: translateY(-9px);
+      }
+      .menubtn__burger::after {
+        transform: translateY(9px);
+      }
+    }

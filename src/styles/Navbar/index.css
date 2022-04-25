@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+nav.Navbar {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #181818;
+}
+
+nav.Navbar div.navcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+}
+
+nav.Navbar div.navcontainer select {
+  padding: 0px 20px 0px 20px;
+  border: 1px solid #474747;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  font-weight: 800;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2rem;
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+nav.Navbar div.navcontainer select option {
+  cursor: pointer;
+}
+
+nav.Navbar div.navcontainer select:hover {
+  background-color: #3f3f3f;
+}
+
+nav.Navbar a {
+  margin-left: 20px;
+  outline: none;
+  border: none;
+  margin-right: auto;
+  z-index: 15;
+  background: none;
+  text-decoration: none;
+  color: #e7e7e7;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+nav.Navbar div.Searchbar {
+  border-radius: 10px;
+  height: 50px;
+  margin-right: 50px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.Navbar div.Searchbar:hover input {
+  padding: 1.1em;
+  width: 200px;
+}
+
+nav.Navbar div.Searchbar:hover button {
+  border-radius: 0px 10px 10px 0px;
+  background-color: #f0f0f0;
+}
+
+nav.Navbar div.Searchbar input {
+  padding: 0;
+  -webkit-transition: all ease-out 400ms;
+  transition: all ease-out 400ms;
+  width: 0px;
+  font-size: 16px;
+  border-radius: 10px 0px 0px 10px;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+
+nav.Navbar div.Searchbar input:focus {
+  padding: 1.1em;
+  width: 200px;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+  z-index: 1;
+}
+
+nav.Navbar div.Searchbar button {
+  height: 100%;
+  -webkit-transition: border-radius  ease-out 400ms;
+  transition: border-radius  ease-out 400ms;
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 0 .5em 0 .5em;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+nav.Navbar div.Searchbar button:hover {
+  background-color: #d7d7d7;
+}
+
+nav.Navbar div.Searchbar button:active {
+  background-color: #0f0f0f;
+}
+
+nav.Navbar div.Searchbar button:active img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+@media screen and (max-width: 700px) {
+  nav.Navbar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav.Navbar a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav.Navbar select {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin: 0;
+    padding: 0;
+  }
+  nav.Navbar div.Searchbar {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  nav.Navbar div.Searchbar input {
+    padding: 1.1em;
+    width: 150px;
+  }
+  nav.Navbar div.Searchbar button {
+    border-radius: 0px 10px 10px 0px;
+    background-color: #f0f0f0;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1000px) and (max-height: 400px) {
+  nav.Navbar {
+    height: 20%;
+  }
+  nav.Navbar a {
+    font-size: 1.2rem;
+  }
+  nav.Navbar div.Searchbar {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav.Navbar div.navcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 5px;
+  }
+  nav.Navbar div.navcontainer select {
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #474747;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8rem;
+    background-color: #2e2e2e;
+    cursor: pointer;
+  }
+  nav.Navbar div.navcontainer select option {
+    cursor: pointer;
+  }
+  nav.Navbar div.navcontainer select:hover {
+    background-color: #3f3f3f;
+  }
+  nav.Navbar a {
+    margin: 0;
+    font-size: 1rem;
+    padding-right: 2px;
+    z-index: 2;
+  }
+  nav.Navbar div.Searchbar {
+    margin: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  nav.Navbar div.Searchbar input {
+    padding: 1.1em;
+    width: 100px;
+  }
+  nav.Navbar div.Searchbar button {
+    border-radius: 0px 10px 10px 0px;
+    background-color: #f0f0f0;
+  }
+}
+
+.menubtn {
+  margin-left: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.menubtn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menubtn__burger::before,
+.menubtn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menubtn__burger::before {
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+.menubtn__burger::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+@media screen and (max-width: 600px) {
+  .menubtn__burger {
+    width: 25px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menubtn__burger::before,
+  .menubtn__burger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menubtn {
+    margin-left: 2px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 35px;
+    height: 80px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    /* border: 3px solid #fff; */
+  }
+  .menubtn__burger {
+    width: 25px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menubtn__burger::before,
+  .menubtn__burger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menubtn__burger::before {
+    -webkit-transform: translateY(-9px);
+            transform: translateY(-9px);
+  }
+  .menubtn__burger::after {
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+}
+/*# sourceMappingURL=index.css.map */
